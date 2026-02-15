@@ -39,10 +39,14 @@
 
     /* --- Spacing --- */
     --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 8rem;
+    --spacing-sm: 1.5rem;
+    /* Increased from 1rem */
+    --spacing-md: 3rem;
+    /* Increased from 2rem */
+    --spacing-lg: 6rem;
+    /* Increased from 4rem */
+    --spacing-xl: 10rem;
+    /* Increased from 8rem */
 
     /* --- Transitions --- */
     --transition-fast: 0.2s ease;
