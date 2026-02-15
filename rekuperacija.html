@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemi | Hansen Novo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .product-feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .product-feature-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            color: var(--text-muted);
+        }
+
+        .product-feature-list i {
+            color: var(--accent-teal);
+            margin-right: 12px;
+            margin-top: 5px;
+        }
+
+        .highlight-box {
+            background: rgba(100, 255, 218, 0.05);
+            border-left: 3px solid var(--accent-teal);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tech-spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .tech-spec-item strong {
+            color: var(--text-primary);
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container flex justify-between items-center h-full"
+            style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <a href="index.html" class="logo">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary); letter-spacing: 1px;">
+                    HANSEN<span style="color: var(--accent-teal);">.NOVO</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Domov</a>
+                <a href="o-podjetju.html">O Podjetju</a>
+                <a href="rekuperacija.html" class="text-teal">Sistemi</a>
+                <a href="projects.html">Reference</a>
+                <a href="prispevki.html">Prispevki</a>
+                <a href="contact.html" class="btn btn-primary"
+                    style="margin-left: 2rem; padding: 0.5rem 1.5rem; font-size: 0.9rem;">Kontakt</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"
+                style="color: var(--text-primary); cursor: pointer; display: none;"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header fade-up"
+        style="padding-top: 150px; padding-bottom: 80px; text-align: center; background: radial-gradient(circle at center, var(--bg-secondary), var(--bg-primary));">
+        <div class="container">
+            <h1 class="section-title">Hansen Sistemi z Rekuperacijo</h1>
+            <p class="section-desc" style="max-width: 700px; margin: 0 auto;">Vrhunski prezračevalni sistemi s 94%
+                toplotnim izkoristkom. Tihi, elegantni in učinkoviti.</p>
+        </div>
+    </header>
+
+    <!-- Flagship Product: PRO 160 Wireless -->
+    <section class="section-padding">
+        <div class="container grid grid-cols-2 gap-md items-center">
+            <div class="image-wrapper fade-up">
+                <div
+                    style="width: 100%; height: 500px; background: url('assets/images/service.jpg') center/cover; border-radius: 8px; box-shadow: var(--shadow-card);">
+                </div>
+            </div>
+            <div class="product-content fade-up">
+                <h3 class="text-accent mb-2"
+                    style="color: var(--accent-gold); letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">
+                    Najbolj Prodajano</h3>
+                <h2 class="mb-4">HANSEN PRO 160 Wireless</h2>
+                <p>Vrhunski prezračevalni sistem z rekuperacijo za prezračevanje bivalnih, delovnih in javnih objektov.
+                    Sistem zagotavlja konstantno temperaturo zraka, obenem pa omogoča neprestano prezračevanje brez
+                    toplotnih izgub.</p>
+
+                <div class="highlight-box">
+                    <p class="mb-0" style="color: var(--text-primary);"><strong>Rešitev za vlago in plesen:</strong> 93%
+                        izkoristek delovanja uspešno odpravi težave z vlago in izboljša mikroklimo.</p>
+                </div>
+
+                <ul class="product-feature-list">
+                    <li><i class="fas fa-check-circle"></i> Brezžična povezava med enotami (brez kablov)</li>
+                    <li><i class="fas fa-volume-mute"></i> Izjemno tiho delovanje (NOČNI NAČIN)</li>
+                    <li><i class="fas fa-magic"></i> Elegantna sprednja maska</li>
+                    <li><i class="fas fa-microchip"></i> Vgrajen senzor vlage in svetlobe</li>
+                    <li><i class="fas fa-mobile-alt"></i> Daljinski upravljalnik z digitalnim prikazom</li>
+                </ul>
+
+                <a href="contact.html" class="btn btn-primary mt-4">Zahtevaj Ponudbo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product 2: PRO 160 Active -->
+    <section class="section-padding bg-secondary">
+        <div class="container grid grid-cols-2 gap-md items-center">
+            <div class="product-content fade-up order-2-mobile">
+                <h2 class="mb-4">HANSEN PRO 160 Active</h2>
+                <p>Rekuperator HANSEN s 94% izkoristkom delovanja in žično povezavo med enotami. Idealna izbira za
+                    novogradnje ali objekte v fazi prenove, kjer je inštalacija kablov mogoča.</p>
+
+                <ul class="product-feature-list">
+                    <li><i class="fas fa-check-circle"></i> Žična povezava za maksimalno stabilnost</li>
+                    <li><i class="fas fa-wind"></i> Visok pretok zraka pri nizki porabi</li>
+                    <li><i class="fas fa-filter"></i> Napredno filtriranje zraka (G3 + filter aktivnega oglja)</li>
+                    <li><i class="fas fa-shield-alt"></i> Dolga življenjska doba in enostavno vzdrževanje</li>
+                </ul>
+
+                <a href="contact.html" class="btn btn-secondary mt-4">Pošlji Povpraševanje</a>
+            </div>
+            <div class="image-wrapper fade-up">
+                <div
+                    style="width: 100%; height: 500px; background: url('assets/images/ventilation.jpg') center/cover; border-radius: 8px; box-shadow: var(--shadow-card);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Products Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5 fade-up">Ostali Modeli</h2>
+            <div class="grid grid-cols-3 gap-md">
+
+                <!-- Card 1 -->
+                <div class="card fade-up">
+                    <h3 class="mb-3">HANSEN PRO 100 Wireless</h3>
+                    <p class="text-sm mb-4">Kompakten model za manjše prostore.</p>
+                    <ul class="product-feature-list text-sm">
+                        <li><i class="fas fa-wifi"></i> Brezžična povezava</li>
+                        <li><i class="fas fa-leaf"></i> 94% izkoristek</li>
+                    </ul>
+                    <a href="contact.html" class="link-arrow">Več informacij &rarr;</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card fade-up" style="transition-delay: 0.1s;">
+                    <h3 class="mb-3">HANSEN Eco 150 Wireless</h3>
+                    <p class="text-sm mb-4">Ekonomična izbira z visokim učinkom.</p>
+                    <ul class="product-feature-list text-sm">
+                        <li><i class="fas fa-tint"></i> Regulacija razvlaževanja</li>
+                        <li><i class="fas fa-volume-down"></i> Nizka glasnost</li>
+                    </ul>
+                    <a href="contact.html" class="link-arrow">Več informacij &rarr;</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card fade-up" style="transition-delay: 0.2s;">
+                    <h3 class="mb-3">HANSEN Eco 100</h3>
+                    <p class="text-sm mb-4">Osnovni model za učinkovito prezračevanje.</p>
+                    <ul class="product-feature-list text-sm">
+                        <li><i class="fas fa-home"></i> Za manjše sobe</li>
+                        <li><i class="fas fa-bolt"></i> Nizka poraba energije</li>
+                    </ul>
+                    <a href="contact.html" class="link-arrow">Več informacij &rarr;</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / Benefits Summary -->
+    <section class="section-padding bg-secondary">
+        <div class="container text-center fade-up">
+            <h2 class="mb-5">Zakaj Izbrati Hansen Rekuperacijo?</h2>
+            <div class="grid grid-cols-3 gap-md">
+                <div class="benefit-item">
+                    <i class="fas fa-feather-alt text-gold text-4xl mb-3"></i>
+                    <h3>Svež Zrak 24/7</h3>
+                    <p>Brez odpiranja oken in izgube toplote.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-ban text-gold text-4xl mb-3"></i>
+                    <h3>Brez Plesni</h3>
+                    <p>Učinkovito odvajanje odvečne vlage preprečuje nastanek plesni.</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-wallet text-gold text-4xl mb-3"></i>
+                    <h3>Prihranek</h3>
+                    <p>Zmanjšajte stroške ogrevanja do 30% zahvaljujoč rekuperaciji toplote.</p>
+                </div>
+            </div>
+            <div class="mt-5">
+                <a href="assets/docs/hansen-prospekt.pdf" class="btn btn-primary" target="_blank"><i
+                        class="fas fa-file-pdf mr-2"></i> Prenesi Katalog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid grid-cols-3 gap-md" style="padding-bottom: 3rem;">
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out;">
+                <h4 style="margin-bottom: 1.5rem;"><span style="color: var(--text-primary);">HANSEN</span><span
+                        style="color: var(--accent-teal);">.NOVO</span></h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 300px;">
+                    Vodilni ponudnik naprednih prezračevalnih sistemov z rekuperacijo. Ustvarjamo zdravo bivalno okolje
+                    za prihodnost.
+                </p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="#" style="color: var(--text-primary); margin-right: 1rem;"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--text-primary); margin-right: 1rem;"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: var(--text-primary);"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out 0.1s backwards;">
+                <h4 style="margin-bottom: 1.5rem;">Hitre Povezave</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="rekuperacija.html"
+                            style="color: var(--text-muted);">Prezračevalni Sistemi</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="projects.html" style="color: var(--text-muted);">Naše
+                            Reference</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="poslovno-sodelovanje.html"
+                            style="color: var(--text-muted);">Poslovno Sodelovanje</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="politika-zasebnosti.html"
+                            style="color: var(--text-muted);">Politika Zasebnosti</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out 0.2s backwards;">
+                <h4 style="margin-bottom: 1.5rem;">Kontakt</h4>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-phone-alt"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> +386 1 234 567</p>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-envelope"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> info@hansen.si</p>
+                <p style="color: var(--text-muted);"><i class="fas fa-map-marker-alt"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> Industrijska cesta 15, Ljubljana</p>
+            </div>
+        </div>
+        <div class="footer-bottom"
+            style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem;">
+            <p style="color: var(--text-secondary); font-size: 0.85rem;">&copy; 2026 Hansen Novo. Vse pravice pridržane.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

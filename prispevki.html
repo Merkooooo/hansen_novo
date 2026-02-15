@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prispevki | Hansen Novo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .blog-filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--accent-teal);
+            color: var(--bg-primary);
+            border-color: var(--accent-teal);
+        }
+
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 3rem auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 10px rgba(100, 255, 218, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .blog-card {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-img {
+            height: 200px;
+            background: #233554;
+            position: relative;
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container flex justify-between items-center h-full"
+            style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
+            <a href="index.html" class="logo">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary); letter-spacing: 1px;">
+                    HANSEN<span style="color: var(--accent-teal);">.NOVO</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Domov</a>
+                <a href="o-podjetju.html">O Podjetju</a>
+                <a href="rekuperacija.html">Sistemi</a>
+                <a href="projects.html">Reference</a>
+                <a href="prispevki.html" class="text-teal">Prispevki</a>
+                <a href="contact.html" class="btn btn-primary"
+                    style="margin-left: 2rem; padding: 0.5rem 1.5rem; font-size: 0.9rem;">Kontakt</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"
+                style="color: var(--text-primary); cursor: pointer; display: none;"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header fade-up" style="padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1 class="section-title">Prispevki o Prezračevanju</h1>
+            <p class="section-desc">Nasveti, novice in strokovni članki za boljše bivanje.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+
+            <!-- Search & Filters -->
+            <div class="search-container fade-up">
+                <input type="text" class="search-input" placeholder="Išči prispevke...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div class="blog-filter-bar fade-up">
+                <button class="filter-btn active">Vsi</button>
+                <button class="filter-btn">Nasveti</button>
+                <button class="filter-btn">Novice</button>
+                <button class="filter-btn">Tehnologija</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="grid grid-cols-3 gap-md">
+
+                <!-- Article 1 -->
+                <div class="blog-card fade-up">
+                    <div class="blog-img" style="background: url('assets/images/ventilation.jpg') center/cover;">
+                        <span class="category-tag">Nasveti</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt mr-2"></i> 10. Feb 2026</span>
+                        <h3 class="mb-3">Lokalni rekuperator: kombinacija udobja in varčnosti</h3>
+                        <p class="text-muted text-sm mb-4">Zakaj je lokalno prezračevanje idealna rešitev za sanacije in
+                            kako prihrani denar.</p>
+                        <a href="contact.html" class="link-arrow mt-auto">Preberi več &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="blog-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="blog-img" style="background: url('assets/images/service.jpg') center/cover;">
+                        <span class="category-tag">Zdravje</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt mr-2"></i> 05. Feb 2026</span>
+                        <h3 class="mb-3">Prezračevalni sistem je naložba v zdravje</h3>
+                        <p class="text-muted text-sm mb-4">Kako svež zrak vpliva na vaše počutje, spanje in
+                            koncentracijo.</p>
+                        <a href="contact.html" class="link-arrow mt-auto">Preberi več &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="blog-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="blog-img" style="background: url('assets/images/service.jpg') center/cover;">
+                        <span class="category-tag">Tehnologija</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt mr-2"></i> 28. Jan 2026</span>
+                        <h3 class="mb-3">Rekuperatorji z več kot 90% izrabo</h3>
+                        <p class="text-muted text-sm mb-4">Podroben pregled tehnologije in zakaj je izkoristek pomemben.
+                        </p>
+                        <a href="contact.html" class="link-arrow mt-auto">Preberi več &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="blog-card fade-up">
+                    <div class="blog-img" style="background: url('assets/images/ventilation.jpg') center/cover;">
+                        <span class="category-tag">Finance</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt mr-2"></i> 15. Jan 2026</span>
+                        <h3 class="mb-3">Najcenejši prezračevalni sistem ni vedno dobra izbira</h3>
+                        <p class="text-muted text-sm mb-4">Analiza dolgoročnih stroškov in zakaj se splača investirati v
+                            kakovost.</p>
+                        <a href="contact.html" class="link-arrow mt-auto">Preberi več &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="blog-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="blog-img" style="background: url('assets/images/service.jpg') center/cover;">
+                        <span class="category-tag">Nasveti</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt mr-2"></i> 10. Jan 2026</span>
+                        <h3 class="mb-3">Vlaga v stanovanju: Kako ji preprečiti vstop?</h3>
+                        <p class="text-muted text-sm mb-4">Praktični nasveti za boj proti vlagi in plesni v vašem domu.
+                        </p>
+                        <a href="contact.html" class="link-arrow mt-auto">Preberi več &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="blog-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="blog-img" style="background: url('assets/images/ventilation.jpg') center/cover;">
+                        <span class="category-tag">Tehnologija</span>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt mr-2"></i> 02. Jan 2026</span>
+                        <h3 class="mb-3">Rekuperacija zraka: Kako izboljšati kakovost bivanja</h3>
+                        <p class="text-muted text-sm mb-4">Celovit vodnik po prednostih rekuperacije za sodobno bivanje.
+                        </p>
+                        <a href="contact.html" class="link-arrow mt-auto">Preberi več &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-5 fade-up">
+                <a href="#" class="btn btn-secondary" style="margin-right: 1rem;"><i
+                        class="fas fa-chevron-left"></i></a>
+                <a href="#" class="btn btn-primary">1</a>
+                <a href="#" class="btn btn-secondary" style="margin-left: 1rem;">2</a>
+                <a href="#" class="btn btn-secondary" style="margin-left: 1rem;"><i
+                        class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid grid-cols-3 gap-md" style="padding-bottom: 3rem;">
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out;">
+                <h4 style="margin-bottom: 1.5rem;"><span style="color: var(--text-primary);">HANSEN</span><span
+                        style="color: var(--accent-teal);">.NOVO</span></h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 300px;">
+                    Vodilni ponudnik naprednih prezračevalnih sistemov z rekuperacijo. Ustvarjamo zdravo bivalno okolje
+                    za prihodnost.
+                </p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="#" style="color: var(--text-primary); margin-right: 1rem;"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--text-primary); margin-right: 1rem;"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: var(--text-primary);"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out 0.1s backwards;">
+                <h4 style="margin-bottom: 1.5rem;">Hitre Povezave</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="rekuperacija.html"
+                            style="color: var(--text-muted);">Prezračevalni Sistemi</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="projects.html" style="color: var(--text-muted);">Naše
+                            Reference</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="poslovno-sodelovanje.html"
+                            style="color: var(--text-muted);">Poslovno Sodelovanje</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="politika-zasebnosti.html"
+                            style="color: var(--text-muted);">Politika Zasebnosti</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out 0.2s backwards;">
+                <h4 style="margin-bottom: 1.5rem;">Kontakt</h4>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-phone-alt"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> +386 1 234 567</p>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-envelope"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> info@hansen.si</p>
+                <p style="color: var(--text-muted);"><i class="fas fa-map-marker-alt"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> Industrijska cesta 15, Ljubljana</p>
+            </div>
+        </div>
+        <div class="footer-bottom"
+            style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem;">
+            <p style="color: var(--text-secondary); font-size: 0.85rem;">&copy; 2026 Hansen Novo. Vse pravice pridržane.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

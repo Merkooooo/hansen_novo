@@ -7,19 +7,14 @@
     <title>Hansen Novo | Premium Prezračevalni Sistemi</title>
     <meta name="description"
         content="Vrhunski prezračevalni sistemi z rekuperacijo za Vaš dom. Energetska učinkovitost in svež zrak.">
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
-
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- Placeholder FontAwesome -->
-
-    <!-- Styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -27,26 +22,25 @@
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="container flex justify-between items-center h-full">
+        <div class="container flex justify-between items-center h-full"
+            style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
             <a href="index.html" class="logo">
                 <span
-                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">
-                    HANSEN<span class="text-teal">.NOVO</span>
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary); letter-spacing: 1px;">
+                    HANSEN<span style="color: var(--accent-teal);">.NOVO</span>
                 </span>
             </a>
             <div class="nav-links">
-                <a href="index.html">Domov</a>
-                <a href="about.html">O Podjetju</a>
-                <a href="products.html">Sistemi</a>
+                <a href="index.html" class="text-teal">Domov</a>
+                <a href="o-podjetju.html">O Podjetju</a>
+                <a href="rekuperacija.html">Sistemi</a>
                 <a href="projects.html">Reference</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html" class="btn btn-secondary"
-                    style="padding: 0.5rem 1rem; margin-left: 2rem;">Kontakt</a>
+                <a href="prispevki.html">Prispevki</a>
+                <a href="contact.html" class="btn btn-primary"
+                    style="margin-left: 2rem; padding: 0.5rem 1.5rem; font-size: 0.9rem;">Kontakt</a>
             </div>
-            <!-- Mobile Toggle -->
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="menu-toggle" id="mobile-menu"
+                style="color: var(--text-primary); cursor: pointer; display: none;"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
@@ -55,9 +49,10 @@
         <div class="hero-overlay"></div>
         <div class="hero-content container text-center fade-up">
             <h1 class="hero-title">Svež Zrak.<br>Popolno Udobje.</h1>
-            <p class="hero-subtitle">Napredni prezračevalni sistemi z rekuperacijo za sodoben dom.</p>
+            <p class="hero-subtitle">Napredni prezračevalni sistemi z rekuperacijo za sodoben dom. Brez vlage, brez
+                plesni, z maksimalnim prihrankom.</p>
             <div class="hero-buttons">
-                <a href="products.html" class="btn btn-primary">Razišči Sisteme</a>
+                <a href="rekuperacija.html" class="btn btn-primary">Razišči Sisteme</a>
                 <a href="contact.html" class="btn btn-secondary">Zahtevaj Ponudbo</a>
             </div>
         </div>
@@ -69,59 +64,88 @@
         </div>
     </header>
 
-    <!-- Services Section -->
+    <!-- USP Grid (Unique Selling Propositions) -->
+    <section class="section-padding bg-secondary">
+        <div class="container text-center mb-5 fade-up">
+            <h2 class="section-title">Hansen Standard</h2>
+            <div class="divider mx-auto"></div>
+            <p class="section-desc">Kaj nas loči od ostalih?</p>
+        </div>
+
+        <div class="container grid grid-cols-3 gap-md">
+            <div class="benefit-item fade-up text-center">
+                <i class="fas fa-leaf text-gold text-4xl mb-3"></i>
+                <h3>94% Učinkovitost</h3>
+                <p>Vrhunska rekuperacija toplote pomeni nižje stroške ogrevanja.</p>
+            </div>
+            <div class="benefit-item fade-up text-center" style="transition-delay: 0.1s;">
+                <i class="fas fa-volume-mute text-gold text-4xl mb-3"></i>
+                <h3>Tiho Delovanje</h3>
+                <p>Skoraj neslišno delovanje za vaš miren spanec in udobje.</p>
+            </div>
+            <div class="benefit-item fade-up text-center" style="transition-delay: 0.2s;">
+                <i class="fas fa-wifi text-gold text-4xl mb-3"></i>
+                <h3>Pametno Krmiljenje</h3>
+                <p>Brezžična povezava in senzorji za avtomatsko uravnavanje vlage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Systems Preview -->
     <section class="services section-padding">
         <div class="container">
             <div class="section-header text-center fade-up">
                 <h2 class="section-title">Naše Rešitve</h2>
                 <div class="divider mx-auto"></div>
-                <p class="section-desc">Celovite rešitve za optimalno bivalno klimo.</p>
+                <p class="section-desc">Izberite sistem, ki ustreza vašim potrebam.</p>
             </div>
 
-            <div class="grid grid-cols-3 gap-md" id="services-grid">
-                <!-- Services will be loaded dynamically from JSON -->
-                <!-- Fallback content if JS fails -->
-                <div class="service-card fade-up" style="transition-delay: 0.1s;">
-                    <div class="icon-box"><i class="fas fa-wind"></i></div>
-                    <h3>Rekuperacija</h3>
-                    <p>Sistemi z vračanjem toplote za maksimalni prihranek energije.</p>
-                    <a href="products.html" class="link-arrow">Več o tem &rarr;</a>
+            <div class="grid grid-cols-3 gap-md">
+
+                <div class="card fade-up">
+                    <div class="text-teal text-4xl mb-4"><i class="fas fa-wind"></i></div>
+                    <h3 class="mb-3">PRO 160 Wireless</h3>
+                    <p class="text-muted mb-4">Naš najbolj prodajan model. Brezžična povezava in vrhunska učinkovitost
+                        za vsak prostor.</p>
+                    <a href="rekuperacija.html" class="link-arrow">Več podrobnosti &rarr;</a>
                 </div>
-                <div class="service-card fade-up" style="transition-delay: 0.2s;">
-                    <div class="icon-box"><i class="fas fa-home"></i></div>
-                    <h3>Lokalno</h3>
-                    <p>Idealno za sanacije in posamezne prostore brez velikih posegov.</p>
-                    <a href="products.html" class="link-arrow">Več o tem &rarr;</a>
+
+                <div class="card fade-up" style="transition-delay: 0.1s;">
+                    <div class="text-teal text-4xl mb-4"><i class="fas fa-plug"></i></div>
+                    <h3 class="mb-3">PRO 160 Active</h3>
+                    <p class="text-muted mb-4">Žična izvedba za novogradnje in objekte v fazi prenove. Stabilnost in
+                        moč.</p>
+                    <a href="rekuperacija.html" class="link-arrow">Več podrobnosti &rarr;</a>
                 </div>
-                <div class="service-card fade-up" style="transition-delay: 0.3s;">
-                    <div class="icon-box"><i class="fas fa-tools"></i></div>
-                    <h3>Servis</h3>
-                    <p>Strokovno vzdrževanje in menjava filtrov za dolgoročno delovanje.</p>
-                    <a href="contact.html" class="link-arrow">Naroči servis &rarr;</a>
+
+                <div class="card fade-up" style="transition-delay: 0.2s;">
+                    <div class="text-teal text-4xl mb-4"><i class="fas fa-leaf"></i></div>
+                    <h3 class="mb-3">Eco Serija</h3>
+                    <p class="text-muted mb-4">Ekonomična in učinkovita rešitev za manjše prostore in stanovanja.</p>
+                    <a href="rekuperacija.html" class="link-arrow">Več podrobnosti &rarr;</a>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- About / Why Us Section -->
-    <section class="about-preview section-padding bg-secondary">
+    <!-- Featured Project / About Preview -->
+    <section class="section-padding bg-secondary">
         <div class="container grid grid-cols-2 gap-md items-center">
             <div class="about-image fade-up">
-                <div class="image-wrapper">
-                    <!-- Placeholder image -->
-                    <div style="width: 100%; height: 400px; background: #233554; border-radius: 8px;"></div>
+                <div
+                    style="width: 100%; height: 400px; background: url('assets/images/hansen-pro-160.jpg') center/cover; border-radius: 8px; box-shadow: var(--shadow-card);">
                 </div>
             </div>
             <div class="about-text fade-up">
-                <h2>Zakaj Izbrati Hansen?</h2>
-                <p>Zavezani smo k zagotavljanju najvišje kakovosti bivanja. Naši sistemi so sinonim za zanesljivost,
-                    tiho delovanje in visoko energetsko učinkovitost.</p>
-                <ul class="features-list">
-                    <li><i class="fas fa-check text-teal"></i> Visoka energetska učinkovitost</li>
-                    <li><i class="fas fa-check text-teal"></i> Tiho delovanje</li>
-                    <li><i class="fas fa-check text-teal"></i> Pametno upravljanje</li>
-                </ul>
-                <a href="about.html" class="btn btn-primary mt-4">Spoznajte Nas</a>
+                <h3 class="text-accent mb-2"
+                    style="color: var(--accent-gold); letter-spacing: 2px; font-size: 0.9rem; text-transform: uppercase;">
+                    Zaupanje</h3>
+                <h2 class="mb-4">Z Vami že 20 Let</h2>
+                <p class="mb-4">Podjetje TERSUS d.o.o. z blagovno znamko Hansen postavlja standarde na področju
+                    lokalnega prezračevanja.</p>
+                <p class="mb-6">Več kot 500 uspešno izvedenih projektov in zadovoljnih strank po vsej Sloveniji.</p>
+                <a href="o-podjetju.html" class="btn btn-primary">Preberite Našo Zgodbo</a>
             </div>
         </div>
     </section>
@@ -129,41 +153,66 @@
     <!-- CTA Banner -->
     <section class="cta-banner section-padding text-center">
         <div class="container fade-up">
-            <h2>Želite izboljšati kakovost zraka v vašem domu?</h2>
-            <p>Kontaktirajte nas za brezplačen ogled in svetovanje.</p>
-            <a href="contact.html" class="btn btn-secondary mt-4">Kontaktirajte Nas</a>
+            <h2>Želite izboljšati kakovost bivanja?</h2>
+            <p style="max-width: 600px; margin: 1rem auto;">Naša ekipa strokovnjakov vam bo z veseljem svetovala pri
+                izbiri optimalne rešitve za vaš dom.</p>
+            <a href="contact.html" class="btn btn-secondary mt-4">Zahtevaj Brezplačen Ogled</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container grid grid-cols-3 gap-md py-5">
-            <div class="footer-col">
-                <h4>Hansen.Novo</h4>
-                <p>Vaš partner za svež zrak in zdravo bivanje.</p>
+        <div class="container grid grid-cols-3 gap-md" style="padding-bottom: 3rem;">
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out;">
+                <h4 style="margin-bottom: 1.5rem;"><span style="color: var(--text-primary);">HANSEN</span><span
+                        style="color: var(--accent-teal);">.NOVO</span></h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 300px;">
+                    Vodilni ponudnik naprednih prezračevalnih sistemov z rekuperacijo. Ustvarjamo zdravo bivalno okolje
+                    za prihodnost.
+                </p>
+                <div class="social-links" style="margin-top: 1.5rem;">
+                    <a href="#" style="color: var(--text-primary); margin-right: 1rem;"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" style="color: var(--text-primary); margin-right: 1rem;"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: var(--text-primary);"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Povezave</h4>
-                <ul>
-                    <li><a href="products.html">Sistemi</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out 0.1s backwards;">
+                <h4 style="margin-bottom: 1.5rem;">Hitre Povezave</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;"><a href="rekuperacija.html"
+                            style="color: var(--text-muted);">Prezračevalni Sistemi</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="projects.html" style="color: var(--text-muted);">Naše
+                            Reference</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="poslovno-sodelovanje.html"
+                            style="color: var(--text-muted);">Poslovno Sodelovanje</a></li>
+                    <li style="margin-bottom: 0.8rem;"><a href="politika-zasebnosti.html"
+                            style="color: var(--text-muted);">Politika Zasebnosti</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Kontakt</h4>
-                <p>Email: info@hansen.si</p>
-                <p>Tel: +386 00 000 000</p>
+            <div class="footer-col" style="animation: fade-up 0.5s ease-out 0.2s backwards;">
+                <h4 style="margin-bottom: 1.5rem;">Kontakt</h4>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-phone-alt"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> 080 11 05</p>
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-envelope"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> tersus@siol.net</p>
+                <p style="color: var(--text-muted);"><i class="fas fa-map-marker-alt"
+                        style="color: var(--accent-gold); margin-right: 10px;"></i> Ulica Ivana Selana 15, Brezovica</p>
             </div>
         </div>
-        <div class="footer-bottom text-center py-3">
-            <p>&copy; 2026 Hansen Novo. Vse pravice pridržane.</p>
+        <div class="footer-bottom"
+            style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 2rem;">
+            <p style="color: var(--text-secondary); font-size: 0.85rem;">&copy; 2026 TERSUS d.o.o. Vse pravice
+                pridržane.
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.75rem; margin-top: 0.5rem;">Slike so simbolične. Hansen je
+                blagovna znamka podjetja Tersus d.o.o.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="js/animations.js"></script>
-    <script src="js/data-loader.js"></script>
     <script src="js/main.js"></script>
 </body>
 
