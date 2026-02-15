@@ -1,0 +1,42 @@
+[
+    {
+        "id": "rekuperacija-centralna",
+        "title": "Centralna Rekuperacija",
+        "category": "centralni",
+        "description": "Visoko zmogljiv sistem za celotno hišo z več kot 90% izkoristkom toplote. Tiho in nevidno delovanje.",
+        "icon": "wind",
+        "image": "assets/images/recuperation.jpg"
+    },
+    {
+        "id": "lokalni-rekuperator",
+        "title": "Lokalni Rekuperator",
+        "category": "lokalni",
+        "description": "Idealna rešitev za sanacije in posamezne prostore. Vgradnja neposredno v zid brez razvoda cevi.",
+        "icon": "fan",
+        "image": "assets/images/local-fan.jpg"
+    },
+    {
+        "id": "vodni-kaloriferji",
+        "title": "Vodni Kaloriferji",
+        "category": "industrija",
+        "description": "Ogrevanje in hlajenje večjih industrijskih objektov. Robustna in učinkovita rešitev.",
+        "icon": "industry",
+        "image": "assets/images/industry.jpg"
+    },
+    {
+        "id": "servis",
+        "title": "Vzdrževanje in Servis",
+        "category": "servis",
+        "description": "Redni letni pregledi, čiščenje kanalov in menjava filtrov za zagotavljanje kakovosti zraka.",
+        "icon": "tools",
+        "image": "assets/images/service.jpg"
+    },
+    {
+        "id": "klimatske-naprave",
+        "title": "Klimatske Naprave",
+        "category": "hlajenje",
+        "description": "Najučinkovitejše hlajenje za vroče poletne dni. Inverterska tehnologija za varčevanje.",
+        "icon": "snowflake",
+        "image": "assets/images/ac.jpg"
+    }
+]

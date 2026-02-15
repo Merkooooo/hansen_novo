@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Hansen Novo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            border-radius: 4px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container flex justify-between items-center h-full">
+            <a href="index.html" class="logo">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">
+                    HANSEN<span class="text-teal">.NOVO</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Domov</a>
+                <a href="products.html">Sistemi</a>
+                <a href="contact.html" class="btn btn-secondary">Kontakt</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <header class="page-header fade-up" style="padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1 class="section-title">Kontaktirajte Nas</h1>
+            <p class="section-desc">Tukaj smo za vsa vaša vprašanja in svetovanje.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container grid grid-cols-2 gap-md">
+            <div class="contact-info fade-up">
+                <h3>Stopite v stik</h3>
+                <p class="text-muted mb-4">Veselimo se vašega klica ali sporočila.</p>
+
+                <div class="info-item mb-3">
+                    <i class="fas fa-map-marker-alt text-teal mr-2"></i>
+                    <span>Naslov podjetja 123, 1000 Ljubljana</span>
+                </div>
+                <div class="info-item mb-3">
+                    <i class="fas fa-phone text-teal mr-2"></i>
+                    <span>+386 00 000 000</span>
+                </div>
+                <div class="info-item mb-3">
+                    <i class="fas fa-envelope text-teal mr-2"></i>
+                    <span>info@hansen.si</span>
+                </div>
+            </div>
+
+            <form class="contact-form fade-up">
+                <input type="text" placeholder="Vaše Ime" required>
+                <input type="email" placeholder="Vaš Email" required>
+                <input type="tel" placeholder="Telefonska številka">
+                <textarea rows="5" placeholder="Vaše Sporočilo" required></textarea>
+                <button type="submit" class="btn btn-primary w-full">Pošlji Sporočilo</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

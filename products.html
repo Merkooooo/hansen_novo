@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemi | Hansen Novo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .page-header {
+            padding-top: 150px;
+            padding-bottom: 60px;
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.8));
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-muted);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition-normal);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container flex justify-between items-center h-full">
+            <a href="index.html" class="logo">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">
+                    HANSEN<span class="text-teal">.NOVO</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Domov</a>
+                <a href="about.html">O Podjetju</a>
+                <a href="products.html" class="text-teal">Sistemi</a>
+                <a href="projects.html">Reference</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="btn btn-secondary"
+                    style="padding: 0.5rem 1rem; margin-left: 2rem;">Kontakt</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header fade-up">
+        <div class="container">
+            <h1 class="section-title">Naši Sistemi</h1>
+            <p class="section-desc">Napredne rešitve za prezračevanje in rekuperacijo.</p>
+        </div>
+    </header>
+
+    <!-- Products Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <!-- Filter (Optional logic to be added) -->
+            <div class="filter-buttons fade-up">
+                <button class="filter-btn active" data-filter="all">Vse</button>
+                <button class="filter-btn" data-filter="centralni">Centralni</button>
+                <button class="filter-btn" data-filter="lokalni">Lokalni</button>
+            </div>
+
+            <div class="grid grid-cols-3 gap-md" id="services-grid">
+                <!-- Services loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid grid-cols-3 gap-md py-5">
+            <div class="footer-col">
+                <h4>Hansen.Novo</h4>
+                <p>Vaš partner za svež zrak.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hitre Povezave</h4>
+                <ul>
+                    <li><a href="index.html">Domov</a></li>
+                    <li><a href="projects.html">Reference</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <p>Email: info@hansen.si</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <p>&copy; 2026 Hansen Novo.</p>
+        </div>
+    </footer>
+
+    <script src="js/animations.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

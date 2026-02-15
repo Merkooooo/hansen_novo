@@ -1,0 +1,116 @@
+:root {
+    /* --- Colors: Dark Luxury & Clean Tech --- */
+    --bg-primary: #0a192f;
+    /* Deep Navy */
+    --bg-secondary: #112240;
+    /* Lighter Navy for cards/sections */
+    --bg-tertiary: #233554;
+    /* Even lighter for hover states */
+
+    --accent-primary: #64ffda;
+    /* Teal - Trust & Tech */
+    --accent-secondary: #ccd6f6;
+    /* Off-white for headings */
+    --accent-gold: #ffd700;
+    /* Gold for premium highlights */
+
+    --text-primary: #e6f1ff;
+    /* Main text */
+    --text-muted: #8892b0;
+    /* Secondary text */
+    --text-dark: #020c1b;
+    /* Text on accent backgrounds */
+
+    /* --- Typography --- */
+    --font-heading: 'Playfair Display', serif;
+    /* Luxury Feel */
+    --font-body: 'Inter', sans-serif;
+    /* Clean Readability */
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    --text-4xl: 3rem;
+    --text-display: 4.5rem;
+
+    /* --- Spacing --- */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* --- Transitions --- */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-slow: 0.5s ease-in-out;
+
+    /* --- Shadows --- */
+    --shadow-sm: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    --shadow-md: 0 20px 40px -20px rgba(2, 12, 27, 0.7);
+    --shadow-glow: 0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--accent-secondary);
+    margin: 0 0 var(--spacing-sm) 0;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference | Hansen Novo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .project-card {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .project-visual {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .project-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: var(--accent-gold);
+            cursor: col-resize;
+            z-index: 10;
+        }
+
+        .slider-handle::after {
+            content: '< >';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+            padding: 5px 8px;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .stats-badge {
+            display: inline-block;
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--accent-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 1rem;
+            border: 1px solid var(--accent-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container flex justify-between items-center h-full">
+            <a href="index.html" class="logo">
+                <span
+                    style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">
+                    HANSEN<span class="text-teal">.NOVO</span>
+                </span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Domov</a>
+                <a href="about.html">O Podjetju</a>
+                <a href="products.html">Sistemi</a>
+                <a href="projects.html" class="text-teal">Reference</a>
+                <a href="contact.html" class="btn btn-secondary">Kontakt</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <header class="page-header fade-up" style="padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1 class="section-title">Naše Reference</h1>
+            <p class="section-desc">Uspešno zaključeni projekti in zadovoljne stranke.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container" id="projects-container">
+            <!-- Projects loaded via JS -->
+            <div class="text-center">
+                <p>Nalaganje projektov...</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        async function loadProjects() {
+            try {
+                const response = await fetch('data/projects.json');
+                const projects = await response.json();
+                const container = document.getElementById('projects-container');
+                container.innerHTML = '';
+
+                projects.forEach((proj, index) => {
+                    const el = document.createElement('div');
+                    el.className = 'project-card fade-up';
+                    // Simple static image for now, real comparison slider needs more JS/Struct
+                    // Implementing a "Reveal" effect for demo
+                    el.innerHTML = `
+                        <div class="grid grid-cols-2">
+                             <div class="project-content">
+                                <h3 class="text-2xl mb-2">${proj.title}</h3>
+                                <p class="text-teal mb-4"><i class="fas fa-map-marker-alt"></i> ${proj.location}</p>
+                                <p class="text-muted mb-6">${proj.description}</p>
+                                <div class="mb-4">
+                                    <span class="stats-badge"><i class="fas fa-leaf"></i> ${proj.stats.energy_saved} Prihranek</span>
+                                    <span class="stats-badge"><i class="fas fa-ruler-combined"></i> ${proj.stats.area}</span>
+                                </div>
+                                <a href="contact.html" class="link-arrow">Pošlji povpraševanje za podoben objekt &rarr;</a>
+                            </div>
+                            <div class="project-visual" style="background: url('${proj.image_after}') center/cover; min-height: 300px;">
+                                <div style="position:absolute; bottom:10px; right:10px; background:rgba(0,0,0,0.7); padding:5px 10px; border-radius:4px; font-size:12px;">Po Vgradnji</div>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(el);
+
+                    if (window.fadeObserver) window.fadeObserver.observe(el);
+                    else setTimeout(() => el.classList.add('visible'), 100);
+                });
+            } catch (e) { console.log(e); }
+        }
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "id": "project-1",
+        "title": "Energetska Sanacija Vile",
+        "location": "Ljubljana",
+        "description": "Popolna vgradnja centralnega rekuperacijskega sistema v starejši vili. Rezultat: 92% prihranek pri ogrevanju prezračevalnega zraka.",
+        "image_after": "assets/images/project1-after.jpg",
+        "image_before": "assets/images/project1-before.jpg",
+        "stats": {
+            "energy_saved": "30%",
+            "area": "250m²"
+        }
+    },
+    {
+        "id": "project-2",
+        "title": "Novogradnja Domžale",
+        "location": "Domžale",
+        "description": "Vgradnja nevidnega prezračevanja v stropno konstrukcijo. Sistem zagotavlja neslišno delovanje v spalnih prostorih.",
+        "image_after": "assets/images/project2-after.jpg",
+        "image_before": "assets/images/project2-before.jpg",
+        "stats": {
+            "energy_saved": "A+",
+            "area": "180m²"
+        }
+    },
+    {
+        "id": "project-3",
+        "title": "Industrijski Objekt Kranj",
+        "location": "Kranj",
+        "description": "Industrijsko prezračevanje za proizvodnjo halo. Vzdrževanje optimalne vlage in temperature za procese.",
+        "image_after": "assets/images/project3-after.jpg",
+        "image_before": "assets/images/project3-before.jpg",
+        "stats": {
+            "energy_saved": "45%",
+            "area": "1200m²"
+        }
+    }
+]
